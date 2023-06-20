@@ -71,4 +71,24 @@ create table itemProduct (
 alter table itemProduct add constraint fk_cart_id foreign key (cart_id) references cart(cart_id) ON DELETE CASCADE ON UPDATE CASCADE;
 alter table itemProduct add constraint fk_user_id foreign key (user_id) references users(user_id) ON DELETE CASCADE ON UPDATE CASCADE;
 
-select * from category;
+insert into category (category_id, category_name) values
+(1, 'Minuman'),
+(2, 'Snack'),
+(3, 'Makanan');
+
+insert into product (product_id, product_name, category_id, stock, price) values
+(1, 'Sprite', 1, 10, 5000),
+(2, 'Coca-cola', 1, 15, 7000),
+(3, 'Fanta', 1, 12, 6000),
+(4, 'Chitato', 2, 13, 8000),
+(5, 'Lays', 2, 8, 9000),
+(6, 'Cheetos', 2, 7, 8500),
+(7, 'Nasi Goreng', 3, 7, 13000),
+(8, 'Nasi Uduk', 3, 9, 11000),
+(9, 'Mie Godog', 3, 5, 14000);
+
+insert into users (user_id, username) values
+(1, 'Anita'),
+(2, 'Malenia'),
+(3, 'Margit');
+
