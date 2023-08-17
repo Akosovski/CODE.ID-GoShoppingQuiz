@@ -92,3 +92,4 @@ insert into users (user_id, username) values
 (2, 'Malenia'),
 (3, 'Margit');
 
+select * from product;
